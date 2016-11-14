@@ -80,7 +80,7 @@ public class ReserveSeats{
         if(airplane.getAirplaneSeats()[row][column].isVacant){
             passengers.add(new Passenger(firstName, lastName, row, column)); // adds new passenger to list of passengers
             airplane.setAirplaneSeatName(row, column, firstName, lastName); // adds passenger to airplane (sets seat name)
-            System.out.println("Your seat was reserved.\n");
+            System.out.format("Your seat at %s%s was reserved.\n\n", row + 1, (char)(column + 65));
         } else {
             System.out.println("The seat is already taken.");
             System.out.println("Your seat was not reserved.");
@@ -106,7 +106,7 @@ public class ReserveSeats{
             passengers.add(new Passenger(firstName, lastName, row, column)); // adds new passenger to list of passengers
             airplane.setAirplaneSeatName(row, column, firstName, lastName); // adds passenger to airplane (sets seat name)
             if(output){
-                System.out.println("Your seat was reserved.\n");
+                System.out.format("Your seat at %s%s was reserved.\n\n", row + 1, (char)(column + 65));
             }
         } else {
             System.out.println("The seat is already taken.");
@@ -216,7 +216,6 @@ public class ReserveSeats{
             } else if(prefs.contains("second class") ||
                     prefs.contains("not first class")) {
                 classChoice = 0;
-                System.out.println("executed");
             } else {
                 classChoice = 2;
             }
