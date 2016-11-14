@@ -94,7 +94,7 @@ public class AirlineCompany {
             int currentSeat = (int)Math.floor(Math.random()*96);
             int row = currentSeat / 8;
             int column = currentSeat % 8;
-            if(airplane.getAirplaneSeats()[column][row].isVacant){
+            if(airplane.getAirplaneSeats()[row][column].isVacant){
                 seatsToFill--;
                 String firstName = "John " + seatsToFill;
                 String lastName = "Doe";
